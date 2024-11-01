@@ -1,0 +1,14 @@
+//c program to concatenate string with the count
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char destination[50] = "Hello, ";
+    char source[] = "World!";
+     int num = 3;
+    strncat(destination, source, num);
+    
+    printf("After concatenation: %s\n", destination);
+    
+    return 0;
+}
