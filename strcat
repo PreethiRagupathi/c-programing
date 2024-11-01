@@ -1,0 +1,13 @@
+//concatenate two strings
+#include <stdio.h>
+void main()
+{
+    char first_name[30];
+    scanf("%s",first_name);
+    char last_name[15];
+    scanf("%s",last_name);
+    strcat(first_name,last_name);
+    printf("I am %s ",first_name);
+    
+}
+
