@@ -1,0 +1,13 @@
+//c program to copy string using string copy function and counting using count() function
+#include<stdio.h>
+void main()
+{
+    char str1[9]="computer";
+    char str2[9];
+    char str3[9];
+    printf("before copy%s\n".str2);
+    strncpy(str2,str1);
+    printf("after copy %s\n",str2);
+    strncpy(str3,str1,4);
+    printf(" after copy with count %s",str3);
+    }
