@@ -1,0 +1,12 @@
+//to print elements which was stored in array
+void main()
+{
+    int age[5];
+    age[0]=12;
+    age[1]=14;
+    age[2]=16;
+    age[3]=18;
+    age[4]=15;
+    printf("%d",age[3]);
+
+}
