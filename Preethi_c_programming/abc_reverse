@@ -1,0 +1,11 @@
+//to print abc in reverse order
+#include<stdio.h>
+void main()
+{
+    int i;
+    for(i=97;i>=65;i--)
+    {
+        printf("%c",i);
+    }
+    printf("\n");
+}
