@@ -1,0 +1,12 @@
+//basic c program in array (to print the elements in array using for loop)
+#include<stdio.h>
+void main()
+{
+    int age[5];
+    for(int i=0;i<=4;i++)
+    {
+        scanf("%d",age[i]);
+    }
+    printf("%d",age[i]);
+
+}
