@@ -1,0 +1,9 @@
+//c program to copy string using string copy function
+#include<stdio.h>
+void main()
+{
+    char str1[9]="computer";
+    char str2[9];
+    strcpy(str2,str1);
+    printf("%s",str2);
+    }
