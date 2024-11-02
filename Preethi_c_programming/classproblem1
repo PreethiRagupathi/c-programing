@@ -1,0 +1,11 @@
+#include<stdio.h>
+void main()
+{
+    int x=0,y=0;
+    while(x<5)
+    {
+        y=x-y;
+        printf("%d%d"x,y);
+        x=x+1;
+    }
+}
