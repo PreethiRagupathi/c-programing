@@ -1,21 +1,25 @@
-// C Program to Display 1 to 'n' Numbers in 5 Rows Sequential order.
-
+#include<stdio.h>
 int main() 
 {
   int n;
-  printf("Nter no: ");
+  printf("enter no: ");
   scanf("%d",&n);
   for(int i=1;i<=n;i++)
-  {
-      if(i%5!=0)
-      {
-          printf("%d ",i);
-      }
-      else
+  
       {
           printf("%d\n",i);
       }
-  }
+  
      return 0;
 }
+**********************************************************
+OUTPUT:
+enter no: 6
+1
+2
+3
+4
+5
+6
 
+*********************************************************
