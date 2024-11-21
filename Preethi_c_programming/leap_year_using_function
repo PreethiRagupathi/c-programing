@@ -21,3 +21,40 @@ void main()
     printf(" not a leap year");
     }
 }
+(or)
+#include<stdio.h>
+int leap(int x);
+int x,l,n;
+int main()
+
+{
+   
+    printf("enter the year:");
+    scanf("%d",&x);
+    n=leap(x);
+   if(n==1)
+   {
+   printf("leap year");
+   }
+   else
+   printf("not a leap year");
+    return 0;
+}
+int leap(int x)
+{
+    if(x%4==0 || x%100==0 && x%400==0)
+    {
+    return l;
+    }
+    else
+    {
+    return 0;
+    }
+}
+
+
+**********************************************************************************************
+OUTPUT:
+enter the year:2004
+leap year
+**********************************************************************************************
