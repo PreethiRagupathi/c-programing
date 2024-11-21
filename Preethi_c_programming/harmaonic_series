@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    float sum=0;
+    printf("enter the n th term:");
+    scanf("%d",&n);
+    for(int i=0;i<=n;i++)
+    {
+        sum=1/i;
+    }
+    printf(" Harmonic series of the n th tern:%d",sum);
+    return 0;
+}
