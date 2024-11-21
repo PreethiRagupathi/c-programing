@@ -1,3 +1,4 @@
+//scenario based question
 #include<stdio.h>
 void main()
 {
@@ -6,4 +7,8 @@ void main()
     printf("Total number of copies:%d",x+y);
     
 }
+************************************************************************
+OUTPUT:
+Total number of copies:90924
+************************************************************************
 
