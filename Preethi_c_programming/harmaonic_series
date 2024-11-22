@@ -1,14 +1,23 @@
-#include<stdio.h>
-int main()
-{
+//c program to find harmonic series
+#include <stdio.h>
+int main() {
     int n;
-    float sum=0;
-    printf("enter the n th term:");
-    scanf("%d",&n);
-    for(int i=0;i<=n;i++)
-    {
-        sum=1/i;
+    double harmonicSum = 0.0;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    if (n <= 0) {
+        printf("Please enter a positive integer.\n");
+        return 1;
     }
-    printf(" Harmonic series of the n th tern:%d",sum);
+    for (int i = 1; i <= n; i++) {
+        harmonicSum += 1.0 / i;
+    }
+    printf("The harmonic sum of the first %d terms is: %.6f\n", n, harmonicSum);
+
     return 0;
 }
+***********************************************************************
+OUTPUT:
+Enter the number of terms: 8
+The harmonic sum of the first 8 terms is: 2.717857
+***********************************************************************
