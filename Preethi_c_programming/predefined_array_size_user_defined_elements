@@ -1,0 +1,29 @@
+//basic c program in array (to print the elements in array using for loop)
+#include<stdio.h>
+void main()
+{
+    int age[5],i;
+    for(int i=0;i<=4;i++)
+    {
+        scanf("%d",age[i]);
+    }
+    printf("printing elements");
+    for(int i=0;i<=4;i++)
+    {
+      printf("%d",age[i]);
+    }
+
+}
+********************************************************************************
+OUTPUT:
+1
+2
+3
+4
+5
+printig elements
+1
+2
+3
+4
+5
