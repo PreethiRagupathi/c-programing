@@ -1,0 +1,33 @@
+//c program to give command about signals
+#include<stdio.h>
+int main()
+{
+    char p;
+    printf("choose your character\n RED-r\n GREEN-g \n YELLOW-Y");
+    scanf("%c",&p);
+    switch(p)
+    {
+    case 'r':
+    printf("stop");
+    break;
+    break;
+    case 'y':
+    printf("get ready");
+    break;
+    case 'g':
+    printf("gooo");
+    break;
+    default:
+    printf("invalid option");
+    }
+    return 0;
+    
+}
+**********************************************************************************
+OUTPUT:
+choose your character
+ RED-r
+ GREEN-g 
+ YELLOW-Yr
+stop
+**********************************************************************************
