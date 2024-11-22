@@ -1,0 +1,16 @@
+//Scenario based question
+#include<stdio.h>
+int main()
+{
+    int x=5,y;
+    printf("entr y:");
+    scanf("%d",&y);
+    printf("glass of orange juice:%d",x/y);
+    return 0;
+    
+}
+***********************************************************************
+OUTPUT:
+enter X:25
+glass of orange juice:5
+***********************************************************************
