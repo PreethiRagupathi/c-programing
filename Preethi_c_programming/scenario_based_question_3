@@ -1,0 +1,18 @@
+//scenario based quesion
+#include<stdio.>
+void main()
+{
+    int x,y;
+    printf("The amount she spent on wednesday:");
+    scanf("%d",&x);
+    printf("The amount she spent on thursday:");
+    scanf("%d",&y);
+    printf("total amount she spent %d",x+x+y);
+}
+*************************************************************
+OUTPUT:
+The amount she spent on wednesday:89
+The amount she spent on thursday:56
+    total amount she spent234
+************************************************************
+
