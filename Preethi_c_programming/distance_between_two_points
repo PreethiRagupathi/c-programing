@@ -1,3 +1,4 @@
+//c program to find distance betwen two points
 #include <stdio.h>
 #include <math.h> 
 
