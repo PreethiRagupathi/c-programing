@@ -1,0 +1,18 @@
+//c program to find the factorial for a given number
+#include<stdio.h>
+int main()
+{
+    int n,fact=1;
+    printf("enter n");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    printf("factorial of %d is %d",n,fact);
+}
+******************************************************************
+output:
+enter n 55
+factorial of 5 is 120
+******************************************************************
