@@ -1,3 +1,4 @@
+//menu card program based on the scenario question
 #include <stdio.h>
 
 int main() {
@@ -32,4 +33,14 @@ int main() {
 
     return 0;
 }
-
+**************************************************************************
+OUTPUT:
+Menu:
+1. Pizza
+2. Burger
+3. Pasta
+4. Salad
+5. Drink
+Enter your choice (1-5): 5
+You ordered Drink.
+*************************************************************************
