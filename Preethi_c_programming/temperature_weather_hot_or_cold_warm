@@ -1,3 +1,4 @@
+// C program to say weather the temperature is hot or warm or hold
 #include <stdio.h>
 
 int main() {
@@ -16,3 +17,8 @@ int main() {
     return 0;
 }
 
+*****************************************************************************
+OUTPUT:
+Enter the temperature in Celsius: 34
+Hot
+*****************************************************************************
