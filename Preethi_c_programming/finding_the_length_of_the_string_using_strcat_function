@@ -1,0 +1,23 @@
+//c program to concatenate two strings using strcat() functions 
+#include <stdio.h>
+#include<string.h>
+void main()
+{
+    char first_name[30];
+    printf("enter a first string:\n");
+    scanf("%s",first_name);
+     printf("enter a second string:\n");
+    char last_name[15];
+    scanf("%s",last_name);
+    strcat(first_name,last_name);
+    printf("I am %s ",first_name);
+    
+}
+***********************************************************************
+OUTPUT:
+enter a first string:
+preethi
+enter a second string:
+ragupathi
+I am preethiragupathi 
+***********************************************************************
