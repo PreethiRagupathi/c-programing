@@ -1,0 +1,24 @@
+// c program to find weather a given age is eligible for vote or not
+#include<stdio.h>
+int main()
+{
+    int age;
+    printf("enter age:");
+    scanf("%d",&age);
+    if(age>=18)
+    {
+        printf("older,eligible to vote");
+    }
+    else
+    {
+        printf("not eligible to vote");
+    }
+    return 0;
+    ***********************************************************************
+    OUTPUT:
+    enter age:67
+    older,eligible to vote
+    ***********************************************************************
+    
+    
+    
