@@ -1,0 +1,22 @@
+// c program to copy the one string to the other string without using string copy
+//#include<stdio.h>
+void main()
+{
+    char arr[5],arrcopy[5];
+    printf("enter element to copy each character one by one :");
+    for(int i=0;i<5;i++)
+    {
+     scanf("%c",&arr[i]);
+     arrcopy[i]=arr[i];
+    }
+    for(int j=0;j<5;j++)
+    {
+        printf("%c",arrcopy[j]);
+    }
+}
+******************************************************************************
+OUTPUT:
+enter element to copy each character one by one :
+preethi
+preethi
+******************************************************************************
