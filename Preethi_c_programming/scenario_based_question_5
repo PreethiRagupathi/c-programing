@@ -1,0 +1,33 @@
+// Design a C program to find the eligibility of admission for a professional course  based on the following criteria:
+        Eligibility Criteria       
+       Marks in Maths>=65 and Marks in Phy>=55 and 
+       Marks in Chem>=50  and Total in all three subject >=190 
+Total in Maths and Physics >=140
+
+#include <stdio.h>
+int main() {
+    int math, phy, chem, total, math_phy_total;
+    printf("Enter marks in Mathematics: ");
+    scanf("%d", &math);
+    printf("Enter marks in Physics: ");
+    scanf("%d", &phy);
+    printf("Enter marks in Chemistry: ");
+    scanf("%d", &chem);
+    total = math + phy + chem;
+    math_phy_total = math + phy;
+    if (math >= 65 && phy >= 55 && chem >= 50 &&
+        (total >= 190 || math_phy_total >= 140)) {
+        printf("The candidate is eligible for admission.\n");
+    } else {
+        printf("The candidate is not eligible for admission.\n");
+    }
+
+    return 0;
+}
+*****************************************************************************************************
+OUTPUT:
+Enter marks in Mathematics: 85
+Enter marks in Physics: 90
+Enter marks in Chemistry: 89
+The candidate is eligible for admission.
+*****************************************************************************************************
