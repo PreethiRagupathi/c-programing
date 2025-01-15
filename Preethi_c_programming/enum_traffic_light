@@ -1,0 +1,47 @@
+Design an enumeration to represent the different states of a traffic light (Red, Yellow, Green). 
+Then, create a structure using bit fields to store the current state of a traffic light and whether it is blinking (1 for blinking, 0 for not blinking).
+
+#include <stdio.h>
+typedef enum {
+    RED = 0,
+    YELLOW = 1,
+    GREEN = 2
+} TrafficLightState;
+typedef struct {
+    unsigned int state : 2;    
+    unsigned int blinking : 1;  
+} TrafficLight;
+
+void printTrafficLightStatus(const TrafficLight *light) {
+    printf("Traffic Light State: ");
+    switch (light->state) {
+        case RED:
+            printf("RED");
+            break;
+        case YELLOW:
+            printf("YELLOW");
+            break;
+        case GREEN:
+            printf("GREEN");
+            break;
+        default:
+            printf("UNKNOWN");
+            break;
+    }
+    printf(", Blinking: %s\n", light->blinking ? "Yes" : "No");
+}
+int main() {
+    TrafficLight light;
+    light.state = RED;
+    light.blinking = 1;
+    printTrafficLightStatus(&light);
+    light.state = GREEN;
+    light.blinking = 0;
+    printTrafficLightStatus(&light);
+    return 0;
+}
+***************************************************************************************************************
+OUTPUT:
+Traffic Light State: RED, Blinking: Yes
+Traffic Light State: GREEN, Blinking: No
+***************************************************************************************************************
