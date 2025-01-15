@@ -1,0 +1,36 @@
+1.	Write a C program that calculates the sum of n numbers entered by the user using a while loop.
+The program should prompt the user to enter the value of n and then n integers sequentially. 
+Finally, it should compute and print the sum of these n integers
+
+#include <stdio.h>
+int main() {
+    int n, i = 0, num, sum = 0;
+    printf("Enter the number of integers to sum: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Invalid input! The number of integers should be positive.\n");
+        return 1;
+    }
+    printf("Enter %d integers:\n", n);
+    while (i < n) {
+        printf("Enter number %d: ", i + 1);
+        scanf("%d", &num);
+        sum += num;
+        i++;
+    }
+    printf("The sum of the entered numbers is: %d\n", sum);
+    return 0;
+}
+***************************************************************************************************************
+OUTPUT:
+Enter the number of integers to sum: 5
+Enter 5 integers:
+Enter number 1: 3
+Enter number 2: 4
+Enter number 3: 2
+Enter number 4: 5
+Enter number 5: 45
+The sum of the entered numbers is: 59
+**************************************************************************************************************
+
