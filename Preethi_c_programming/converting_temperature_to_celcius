@@ -1,0 +1,17 @@
+Write a C program to convert a given temperature from Fahrenheit (F) to Celsius (C).
+Include the necessary prompts for user input and ensure the program displays the converted temperature in a formatted output.
+
+#include <stdio.h>
+int main() {
+    float fahrenheit, celsius;
+    printf("Enter temperature in Fahrenheit: ");
+    scanf("%f", &fahrenheit);
+    celsius = (fahrenheit - 32) * 5 / 9;
+    printf("Temperature in Celsius: %.2f\n", celsius);
+    return 0;
+}
+*****************************************************************************************************************
+OUTPUT:
+Enter temperature in Fahrenheit: 45
+Temperature in Celsius: 7.22
+*****************************************************************************************************************
