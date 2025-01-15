@@ -1,0 +1,32 @@
+//comparing two strings and finding which string is longer
+
+#include <stdio.h>
+int main() {
+    char name1[100], name2[100];
+    int length1 = 0, length2 = 0;
+    printf("Enter the first name: ");
+    scanf("%s", name1);
+    printf("Enter the second name: ");
+    scanf("%s", name2);
+    for (int i = 0; name1[i] != '\0'; i++) {
+        length1++;
+    }
+    for (int i = 0; name2[i] != '\0'; i++) {
+        length2++;
+    }
+    if (length1 > length2) {
+        printf("The first name is longer.\n");
+    } else if (length1 < length2) {
+        printf("The second name is longer.\n");
+    } else {
+        printf("Both names have the same length.\n");
+    }
+    return 0;
+}
+
+******************************************************************************************************************************************************
+OUTPUT:
+Enter the first name: preethi
+Enter the second name: dharshini
+The second name is longer.
+******************************************************************************************************************************************************
