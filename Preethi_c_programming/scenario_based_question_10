@@ -1,0 +1,23 @@
+Imagine you are developing a text processing tool for data entry where users occasionally input text in uppercase.
+Write a C program that prompts users to enter a single uppercase character, converts it into its corresponding lowercase character, and
+displays the result. Ensure your program handles valid input scenarios and provides clear output that aids in data normalization and consistency
+
+#include <stdio.h>
+#include <ctype.h> 
+int main() {
+    char uppercase, lowercase;
+    printf("Enter a single uppercase letter: ");
+    scanf(" %c", &uppercase);
+    if (isupper(uppercase)) {
+        lowercase = tolower(uppercase);
+        printf("The lowercase equivalent of '%c' is '%c'.\n", uppercase, lowercase);
+    } else {
+        printf("Error: '%c' is not an uppercase letter. Please enter a valid uppercase letter.\n", uppercase);
+    }
+    return 0;
+}
+**************************************************************************************************
+OUTPUT:
+Enter a single uppercase letter: A
+The lowercase equivalent of 'A' is 'a'.
+**************************************************************************************************
