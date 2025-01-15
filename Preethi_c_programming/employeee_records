@@ -1,0 +1,142 @@
+ Develop a program to store employee records in a binary file named employees.dat, including details such as name, age, and salary.
+How would you handle writing these records using file operations in C?
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct {
+    char name[50];
+    int age;
+    float salary;
+} Employee;
+void addEmployee(const char *filename) {
+    FILE *file = fopen(filename, "ab");
+    if (file == NULL) {
+        perror("Error opening file");
+        return;
+    }
+    Employee emp;
+    printf("Enter name: ");
+    scanf(" %[^\n]", emp.name); // Read input with spaces
+    printf("Enter age: ");
+    scanf("%d", &emp.age);
+    printf("Enter salary: ");
+    scanf("%f", &emp.salary);
+    fwrite(&emp, sizeof(Employee), 1, file);
+    fclose(file);
+    printf("Employee record added successfully.\n");
+}
+void displayEmployees(const char *filename) {
+    FILE *file = fopen(filename, "rb");
+    if (file == NULL) {
+        perror("Error opening file");
+        return;
+    }
+    Employee emp;
+    printf("\nEmployee Records:\n");
+    printf("-----------------\n");
+    while (fread(&emp, sizeof(Employee), 1, file)) {
+        printf("Name: %s\n", emp.name);
+        printf("Age: %d\n", emp.age);
+        printf("Salary: %.2f\n", emp.salary);
+        printf("-----------------\n");
+    }
+    fclose(file);
+}
+void searchEmployee(const char *filename) {
+    FILE *file = fopen(filename, "rb");
+    if (file == NULL) {
+        perror("Error opening file");
+        return;
+    }
+
+    char searchName[50];
+    printf("Enter name to search: ");
+    scanf(" %[^\n]", searchName);
+
+    Employee emp;
+    int found = 0;
+    while (fread(&emp, sizeof(Employee), 1, file)) {
+        if (strcmp(emp.name, searchName) == 0) {
+            printf("\nEmployee Found:\n");
+            printf("Name: %s\n", emp.name);
+            printf("Age: %d\n", emp.age);
+            printf("Salary: %.2f\n", emp.salary);
+            found = 1;
+            break;
+        }
+    }
+
+    if (!found) {
+        printf("Employee with name '%s' not found.\n", searchName);
+    }
+    fclose(file);
+}
+
+int main() {
+    const char *filename = "employees.dat";
+    int choice;
+
+    do {
+        printf("\nEmployee Records Management\n");
+        printf("1. Add Employee\n");
+        printf("2. Display Employees\n");
+        printf("3. Search Employee\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                addEmployee(filename);
+                break;
+            case 2:
+                displayEmployees(filename);
+                break;
+            case 3:
+                searchEmployee(filename);
+                break;
+            case 4:
+                printf("Exiting program.\n");
+                break;
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    } while (choice != 4);
+
+    return 0;
+}
+*************************************************************************************************************
+OUTPUT:
+Employee Records Management
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Exit
+Enter your choice: 1
+Error opening file: Permission denied
+
+Employee Records Management
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Exit
+Enter your choice: 2
+Error opening file: No such file or directory
+
+Employee Records Management
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Exit
+Enter your choice: 3
+Error opening file: No such file or directory
+
+Employee Records Management
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Exit
+Enter your choice: 4
+Exiting program.
+************************************************************************************************************************
