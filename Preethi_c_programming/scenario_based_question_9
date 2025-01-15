@@ -1,0 +1,30 @@
+Design a program to exchange the keys. The Two friends Bob and Jim met in a bank and discussed about their secret code. 
+They decided to exchange their passwords for further transactions. Password of Bob is "Honey" and Jim is “Sweety". Print the password of Jim and Bob after exchange
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char bobPassword[20] = "Honey";
+    char jimPassword[20] = "Sweety";
+    char temp[20]; 
+    printf("Before exchange:\n");
+    printf("Bob's password: %s\n", bobPassword);
+    printf("Jim's password: %s\n", jimPassword);
+    strcpy(temp, bobPassword);   
+    strcpy(bobPassword, jimPassword); 
+    strcpy(jimPassword, temp);  
+    printf("\nAfter exchange:\n");
+    printf("Bob's password: %s\n", bobPassword);
+    printf("Jim's password: %s\n", jimPassword);
+    return 0;
+}
+****************************************************************************************************
+OUTPUT:
+Before exchange:
+Bob's password: Honey
+Jim's password: Sweety
+
+After exchange:
+Bob's password: Sweety
+Jim's password: Honey
+****************************************************************************************************
